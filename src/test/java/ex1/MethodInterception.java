@@ -27,20 +27,19 @@ public class MethodInterception implements InvocationHandler {
         System.out.println("Meth Create Page Start!");
 
 
-
-        MainPage mp = new MainPage() {
-            @Override
-            public String textInputSearch() {
-                System.out.println("Method : textInputSearch()");
-                return "111";
-            }
-
-            @Override
-            public String buttonSearch() {
-                System.out.println("Method : buttonSearch()");
-                return "222";
-            }
-        };
+//        MainPage mp = new MainPage() {
+//            @Override
+//            public String textInputSearch() {
+//                System.out.println("Method : textInputSearch()");
+//                return "111";
+//            }
+//
+//            @Override
+//            public String buttonSearch() {
+//                System.out.println("Method : buttonSearch()");
+//                return "222";
+//            }
+//        };
 
         MainPage mpReturned = (MainPage)Proxy.newProxyInstance(
                 mp.getClass().getClassLoader(),
